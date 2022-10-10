@@ -8,26 +8,33 @@
     <title>Signup Form</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="cont">
       <form id="form1">
         <h3>Personal Details</h3>
 
-        <input type="text" placeholder="First Name*" id="fname"  />
+        <input type="text" placeholder="First Name*" id="fname" name="fname" />
         <span id="fnameWarning"></span>
 
-        <input type="text" placeholder="Last Name*" id="lname"  />
+        <input type="text" placeholder="Last Name*" id="lname" name="lname" />
         <span id="lnameWarning"></span>
 
-        <input type="number" placeholder="Phone No*" id="no"  />
+        <input type="number" placeholder="Phone No*" id="no" name="phoneNo" />
         <span id="phoneNoWarning"></span>
 
-        <input type="text" id="date" onfocus="(this.type='date')" placeholder="Date of Birth*" onblur="(this.type='text')"/>
+        <input
+          type="text"
+          id="date"
+          onfocus="(this.type='date')"
+          placeholder="Date of Birth*"
+          onblur="(this.type='text')"
+          name="dob"
+        />
         <span id="dateWarning"></span>
 
-        <select>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
+        <select name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other" >Other</option>
         </select>
 
         <div class="btn-box">
@@ -37,11 +44,11 @@
 
       <form id="form2">
         <h3>Contact Details</h3>
-        <input type="text" placeholder="Address line-1" />
-        <input type="text" placeholder="Address line- 2" />
-        <input type="text" placeholder="City" />
-        <input type="text" placeholder="State" />
-        <input type="number" placeholder="Pincode" />
+        <input type="text" placeholder="Address line-1" name="add1" />
+        <input type="text" placeholder="Address line- 2" name="add2" />
+        <input type="text" placeholder="City" name="city" />
+        <input type="text" placeholder="State" name="state" />
+        <input type="number" placeholder="Pincode" name="pincode" />
 
         <div class="btn-box">
           <button type="button" id="previous1">Previous</button>
@@ -50,19 +57,25 @@
       </form>
       <form id="form3">
         <h3>Signup Details</h3>
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" />
-        <input type="text" placeholder="Confirm Password" />
+        <input type="text" placeholder="Email*" name="email" id="email" />
+        <span id="emailWarning"></span>
+
+        <input type="password" placeholder="Password*" name="pwd" id="pwd" />
+        <span id="pwdWarning"></span>
+
+        <input type="password" placeholder="Confirm Password*" name="cPwd" id="cPwd" />
+        <span id="cPwdWarning"></span>
+
 
         <div class="btn-box">
           <button type="button" id="previous2">Previous</button>
-          <button>Submit</button>
+          <button type="button" id="submit">Submit</button>
         </div>
       </form>
       <div class="step-row">
         <div id="progress"></div>
         <div class="step-col" id="s1">
-          <small >Step 1</small>
+          <small>Step 1</small>
         </div>
         <div class="step-col" id="s2">
           <small>Step 2</small>
@@ -72,6 +85,19 @@
         </div>
       </div>
     </div>
-    <script src="script.js" ></script>
+
+    <div class="container" id="dp">
+      <div class="step-row">
+        <div id="progress-2">Form Submitted Successfully</div>
+      </div>
+      <div class="dp-section1">
+        <img src="./images//success.gif"/>
+      </div>
+      <div class="dp-section2">
+        <button id="reset" type="submit" class="reset-btn">Reset</button>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
