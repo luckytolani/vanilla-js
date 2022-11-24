@@ -1,13 +1,5 @@
 [
   {
-    "label": "task_01",
-    "description": "Very Important Task",
-    "date": "2022-10-14T11:06:01.618Z",
-    "user": "lakhitolai41@gmail.com",
-    "time": "2:00pm",
-    "id": "b660079f1240f6a0341c03ea1e57ed1d"
-  },
-  {
     "label": "Label is updated guyz",
     "description": "Very Important Task",
     "date": "2022-10-14T11:07:00.590Z",

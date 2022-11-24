@@ -6,6 +6,7 @@ const app = (urlArray, body, method, headers) => {
   console.log(urlArray, method);
   if (urlArray[0] === "auth") {
     return authRouter(urlArray, body, method);
+    
   } else if (urlArray[0] === "task") {
     if (checkLoggedIn(headers["x-access-token"])) {
       return taskRouter(urlArray, body, method);

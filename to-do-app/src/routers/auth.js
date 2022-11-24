@@ -1,4 +1,4 @@
-import { login , signup , changePass} from "../controllers/auth.controller.js";
+import { login , signup , changePass , logout} from "../controllers/auth.controller.js";
 
 const authRouter = (urlArray, body, method) => {
   switch (method) {

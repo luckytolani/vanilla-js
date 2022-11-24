@@ -61,6 +61,10 @@ export const changePass = (email, oldPassword, newPassword) => {
   return { status: true, message: "Success" };
 };
 
+export const logout = () => {
+  
+}
+
 const findUser = (fileData, email) => {
   try {
     if (fileData?.find((user) => user.email === email)) {
