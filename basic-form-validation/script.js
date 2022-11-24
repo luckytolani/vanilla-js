@@ -192,7 +192,6 @@ const signupScript = () => {
       components.fnameWarning.style.display = "block";
       components["fnameWarning"].innerText = warnings["alphabets"];
     } else if (components.fname.value.length < 3) {
-      console.log("radhe");
       flag = false;
       components.fnameWarning.style.display = "block";
       components["fnameWarning"].innerText = warnings["minimumLength"] + 3;
@@ -208,13 +207,11 @@ const signupScript = () => {
       components["lnameWarning"].innerText = warnings["minimumLength"] + 3;
     }
 
-    // let countryCodeRegex =
-    //   /^(\\+\\d{1,3}( )?)?((\\(\\d{3}\\))|\\d{3})[- .]?\\d{3}[- .]?\\d{4}$/;
-    // if (!countryCodeRegex.test(components.lname.value)) {
-    //   flag = false;
-    //   components.phoneNoWarning.style.display = "block";
-    //   components.phoneNoWarning.innerText = warnings["valid"];
-    // }
+   if (components.phoneNo.value.length < 9) {
+      flag = false;
+      components.phoneNoWarning.style.display = "block";
+      components.phoneNoWarning.innerText = warnings["validPhoneNo"];
+    }
 
     let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -254,6 +251,9 @@ const signupScript = () => {
       ? (components.phoneNoWarning.style.display = "none")
       : null;
     components.date.value !== ""
+      ? (components.dateWarning.style.display = "none")
+      : null;
+      components.phoneNo.value !== ""
       ? (components.dateWarning.style.display = "none")
       : null;
     components.email.value !== ""
